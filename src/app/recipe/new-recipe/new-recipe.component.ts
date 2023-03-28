@@ -20,16 +20,14 @@ export class NewRecipeComponent {
     this.title = form.value.title;
     this.description = form.value.description;
 
-    let recipe = new Recipe(this.title,this.description); 
+    let recipe = new Recipe("",this.title,this.description); 
 
     this.recipeService.newRecipe(recipe).subscribe(
       recipe => {
         console.log(recipe);
-        this.router.navigate(['']);
+        this.router.navigate(['/recipes']);
       }
     )
-
-    
   }
 
 }

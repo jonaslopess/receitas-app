@@ -1,3 +1,7 @@
 <mat-card *ngFor="let recipe of recipes">
-    <mat-card-content>{{ recipe.title }}</mat-card-content>
+    <a [routerLink]="['/edit_recipe', recipe._id]">
+        <mat-card-content>
+            {{ recipe.title }}
+        </mat-card-content>
+    </a>
 </mat-card>

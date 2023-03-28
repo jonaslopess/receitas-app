@@ -16,8 +16,16 @@ export class RecipeService {
     return this.http.get<Recipe[]>(this.apiUrl);
   }
 
+  getRecipe(id:string): Observable<Recipe> {
+    return this.http.get<Recipe>(`${this.apiUrl}/${id}`);
+  }
+
   newRecipe(data:Recipe): Observable<Recipe> {
     return this.http.post<Recipe>(this.apiUrl,data);
+  }
+
+  editRecipe(id:string, data:Recipe): Observable<Recipe> {
+    return this.http.patch<Recipe>(`${this.apiUrl}/${id}`,data);
   }
 
 }
