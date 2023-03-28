@@ -1,8 +1,13 @@
-<h1> {{ title }} </h1>
+<mat-toolbar>
+  <span>Dá para fazer Receitas</span>
+</mat-toolbar>
 
-<div>
-  <p>Isso é um componente secundário!</p>
-  <a routerLink='/recipes'>Listar Receitas</a>
-</div>
+<section class="content-container">
+  <p><a routerLink='/recipes'>Listar receitas</a></p>
+</section>
+
+<section class="content-container">
+  <p><a routerLink='/new_recipe'>Nova Receita</a></p>
+</section>
 
 <router-outlet></router-outlet>

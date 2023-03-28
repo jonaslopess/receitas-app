@@ -1,0 +1,31 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <mat-form-field appearance="outline">
+        <mat-label>Título</mat-label>
+        <input matInput 
+            placeholder="Digite um título" 
+            type="text" 
+            id="title" 
+            name="title" 
+            [(ngModel)]="title" 
+            required
+        >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Descrição</mat-label>
+        <input matInput 
+            placeholder="Digite uma descrição" 
+            type="text" 
+            id="description" 
+            name="description" 
+            [(ngModel)]="description" 
+            required
+        >
+    </mat-form-field>
+
+    <button mat-button type='submit'>
+        Cadastrar
+    </button>
+
+</form>
+

@@ -1,9 +1,11 @@
 export class Recipe{
 
-    title:string
+    title:string;
+    description:string;
 
-    constructor(title:string){
-        this.title = title
+    constructor(title:string,description:string){
+        this.title = title;
+        this.description = description;
     }
 
 }

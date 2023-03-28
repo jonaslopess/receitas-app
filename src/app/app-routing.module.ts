@@ -3,9 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ListRecipesComponent } 
 from './recipe/list-recipes/list-recipes.component';
+import { NewRecipeComponent } from './recipe/new-recipe/new-recipe.component';
 
 const routes: Routes = [
-  {path:'recipes', component: ListRecipesComponent}
+  {path:'recipes', component: ListRecipesComponent},
+  {path:'new_recipe', component: NewRecipeComponent}
 ];
 
 @NgModule({

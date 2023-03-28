@@ -14,7 +14,11 @@ export class ListRecipesComponent {
   constructor(private recipeService: RecipeService) {
 
     recipeService.getRecipes().subscribe(
-      recipes => this.recipes = recipes
+      recipes => {
+        this.recipes = recipes.sort(
+          (a,b)=>(a.title > b.title) ? 1 : -1
+        );
+      }
     );
 
   }
