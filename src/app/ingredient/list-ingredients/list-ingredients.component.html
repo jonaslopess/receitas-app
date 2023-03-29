@@ -1,0 +1,7 @@
+<mat-card *ngFor="let ingredient of ingredients">
+    <a [routerLink]="['/edit_ingredient', ingredient._id]">
+        <mat-card-content>
+            {{ ingredient.name }}
+        </mat-card-content>
+    </a>
+</mat-card>

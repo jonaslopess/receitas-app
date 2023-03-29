@@ -14,8 +14,8 @@ export class EditRecipeComponent {
   id : string = ''
   inscricao: Subscription | undefined
 
-  title : string = ''
-  description : string = ''
+  title? : string = ''
+  description? : string = ''
 
   constructor(
     private recipeService: RecipeService,
@@ -47,7 +47,10 @@ export class EditRecipeComponent {
     this.title = form.value.title;
     this.description = form.value.description;
 
-    let recipe = new Recipe(this.id, this.title,this.description); 
+    let recipe : Recipe = {
+      title: this.title,
+      description: this.description
+    }; 
 
     this.recipeService.editRecipe(this.id, recipe).subscribe(
       recipe => {

@@ -1,0 +1,30 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div>
+        <label>Nome</label>
+        <input
+            type="text" 
+            id="name" 
+            name="name" 
+            [(ngModel)]="name" 
+            required
+        />
+    </div>
+
+    <div>
+        <label>Regra de conversão</label>
+        <p>(Peso em gramas de 1ml do ingrediente)</p>
+        <input  
+            type="number" 
+            id="convert_rule" 
+            name="convert_rule" 
+            [(ngModel)]="convert_rule" 
+            required
+        />
+    </div>
+
+    <button type='submit'>
+        Cadastrar
+    </button>
+
+</form>
+

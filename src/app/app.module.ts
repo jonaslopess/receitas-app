@@ -16,6 +16,8 @@ import { ListRecipesComponent } from './recipe/list-recipes/list-recipes.compone
 import { RecipeService } from './recipe/recipe.service';
 import { NewRecipeComponent } from './recipe/new-recipe/new-recipe.component';
 import { EditRecipeComponent } from './recipe/edit-recipe/edit-recipe.component';
+import { ListIngredientsComponent } from './ingredient/list-ingredients/list-ingredients.component';
+import { NewIngredientComponent } from './ingredient/new-ingredient/new-ingredient.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { EditRecipeComponent } from './recipe/edit-recipe/edit-recipe.component'
     AppComponent,
     ListRecipesComponent,
     NewRecipeComponent,
-    EditRecipeComponent   
+    EditRecipeComponent,
+    ListIngredientsComponent,
+    NewIngredientComponent   
   ],
   imports: [
     BrowserModule,
